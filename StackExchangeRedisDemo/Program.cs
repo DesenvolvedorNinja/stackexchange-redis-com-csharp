@@ -8,7 +8,7 @@ namespace StackExchangeRedisDemo
         static void Main(string[] args)
         {
             //estabelecer a conexão com Redis
-            using (ConnectionMultiplexer connectionRedis = ConnectionMultiplexer.Connect("pub-redis-13919.us-east-1-2.5.ec2.garantiadata.com:13919,password=salamandra"))
+            using (ConnectionMultiplexer connectionRedis = ConnectionMultiplexer.Connect("localhost:13919,password=senhadoredis"))
             {
                 //obter o database para envio de comandos ao Redis
                 IDatabase clientRedis = connectionRedis.GetDatabase();
